@@ -204,9 +204,7 @@ body::before {
     align-items: center;
     justify-content: space-between;
     padding: 0 4rem;
-    background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c, #4facfe, #00f2fe);
-    background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 30%, #16213e 70%, #0f0f23 100%);
     position: relative;
     overflow: hidden;
 }
