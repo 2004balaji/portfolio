@@ -709,31 +709,6 @@ p {
     color: #00d4ff;
 }
 
-.project-link {
-    position: relative;
-    z-index: 2;
-    color: #00d4ff;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-.project-link::after {
-    content: '→';
-    margin-left: 8px;
-    transition: transform 0.3s ease;
-}
-
-.project-link:hover {
-    color: #ffffff;
-    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
-}
-
-.project-link:hover::after {
-    transform: translateX(5px);
-}
-
 /* Internship */
 .internship .content {
     max-width: 600px;
