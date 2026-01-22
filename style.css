@@ -1,9 +1,9 @@
-/* Clean Resume Theme */
+/* Advanced Background with Particles */
 body {
     font-family: 'Inter', sans-serif;
-    background: #ffffff;
+    background: linear-gradient(135deg, #0a0a0a 0%, #0f0f23 25%, #1a1a2e 50%, #16213e 75%, #0a0a0a 100%);
     background-attachment: fixed;
-    color: #000000;
+    color: #ffffff;
     line-height: 1.8;
     overflow-x: hidden;
     position: relative;
@@ -98,14 +98,17 @@ body::before {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #ffffff;
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(15, 15, 35, 0.9) 50%, rgba(10, 10, 10, 0.95) 100%);
+    backdrop-filter: blur(20px);
     z-index: 1000;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 212, 255, 0.1);
     transition: all 0.3s ease;
 }
 
 .navbar:hover {
-    background: #f9f9f9;
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.98) 0%, rgba(15, 15, 35, 0.95) 50%, rgba(10, 10, 10, 0.98) 100%);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 212, 255, 0.2);
 }
 
 .nav-container {
@@ -120,12 +123,18 @@ body::before {
 .logo {
     font-size: 2rem;
     font-weight: 800;
-    color: #000000;
+    color: #ffffff;
+    background: linear-gradient(135deg, #ffffff 0%, #00d4ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
     transition: all 0.3s ease;
 }
 
 .logo:hover {
     transform: scale(1.05);
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.8);
 }
 
 .nav-links {
@@ -139,11 +148,11 @@ body::before {
 }
 
 .nav-links a {
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     padding: 0.5rem 1rem;
     border-radius: 8px;
@@ -156,7 +165,7 @@ body::before {
     left: 50%;
     width: 0;
     height: 2px;
-    background: #000000;
+    background: linear-gradient(90deg, #00d4ff, #8a2be2);
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
@@ -168,8 +177,10 @@ body::before {
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: #000000;
-    background: #f0f0f0;
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(0, 212, 255, 0.6);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
 }
 
 .hamburger {
@@ -193,7 +204,9 @@ body::before {
     align-items: center;
     justify-content: center;
     padding: 0 4rem;
-    background: #ffffff;
+    background: linear-gradient(45deg, #0a0a0a, #1a1a2e, #16213e, #0f0f23);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
     position: relative;
     overflow: hidden;
 }
@@ -258,11 +271,16 @@ body::before {
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 900;
     margin-bottom: 2rem;
     line-height: 1.1;
-    color: #000000;
+    background: linear-gradient(135deg, #ffffff 0%, #00d4ff 50%, #8a2be2 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+    animation: glow 2s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
@@ -274,8 +292,9 @@ body::before {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 2.5rem;
-    color: #000000;
+    color: #00d4ff;
     line-height: 1.2;
+    text-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
 }
 
 .hero p {
@@ -507,7 +526,6 @@ p {
     display: flex;
     align-items: center;
     position: relative;
-    background: #ffffff;
 }
 
 .section::before {
@@ -517,7 +535,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: transparent;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.02) 0%, rgba(138, 43, 226, 0.01) 100%);
     pointer-events: none;
 }
 
@@ -538,8 +556,11 @@ p {
 .section-header h2 {
     font-size: 4rem;
     font-weight: 800;
-    color: #000000;
-}
+    color: #ffffff;
+    background: linear-gradient(135deg, #ffffff 0%, #00d4ff 50%, #8a2be2 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
     position: relative;
     display: inline-block;
@@ -553,8 +574,9 @@ p {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background: #000000;
+    background: linear-gradient(90deg, #00d4ff, #8a2be2);
     border-radius: 2px;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
 }
 
 /* About */
@@ -987,6 +1009,19 @@ p {
 
     .scroll-indicator {
         display: none;
+    }
+}
+
+/* Animated Gradient Background */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
 
