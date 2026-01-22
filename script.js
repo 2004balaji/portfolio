@@ -1,10 +1,16 @@
 // Loading Animation
 window.addEventListener('load', () => {
     const loading = document.getElementById('loading');
-    setTimeout(() => {
-        loading.classList.add('hidden');
-    }, 1000);
+    loading.classList.add('hidden');
 });
+
+// Fallback: hide loading after 5 seconds if not already hidden
+setTimeout(() => {
+    const loading = document.getElementById('loading');
+    if (loading && !loading.classList.contains('hidden')) {
+        loading.classList.add('hidden');
+    }
+}, 5000);
 
 // Mobile Navigation
 const hamburger = document.querySelector('.hamburger');
